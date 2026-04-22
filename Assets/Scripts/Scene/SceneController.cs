@@ -1,8 +1,8 @@
 using Emc2.Scripts.Enums;
-using Emc2.Scripts.Fade;
-using Emc2.Scripts.Music;
-using Emc2.Scripts.Singleton;
 using JCC.Debug;
+using JCC.Fade;
+using JCC.Music;
+using JCC.Utils.Singleton;
 using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -41,7 +41,6 @@ namespace Emc2.Scripts.Scenes
             float fadeTime = 1f;
             FadeController.Instance.FadeIn(fadeTime, true, true, cb);
             AudioController.Instance.ExitScene(fadeTime/1.5f);
-
         }
         #endregion public
 

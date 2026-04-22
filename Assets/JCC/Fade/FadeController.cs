@@ -1,9 +1,9 @@
-using Emc2.Scripts.Singleton;
+using JCC.Utils.Singleton;
 using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Emc2.Scripts.Fade 
+namespace JCC.Fade 
 {
     public class FadeController : SingletonMonoBehaviour<FadeController>
     {

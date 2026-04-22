@@ -1,5 +1,5 @@
 {
-    "name": "Emc2.Scripts.Singletons",
+    "name": "JCC.Utils.Singletons",
     "rootNamespace": "",
     "references": [],
     "includePlatforms": [],

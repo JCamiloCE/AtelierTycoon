@@ -1,5 +1,5 @@
 {
-    "name": "Emc2.Scripts.Fade",
+    "name": "JCC.Fade",
     "rootNamespace": "",
     "references": [
         "GUID:5057ce3992ee6464891a923bc3d8a249"

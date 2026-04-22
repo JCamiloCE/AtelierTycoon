@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Emc2.Scripts.Singleton
+namespace JCC.Utils.Singleton
 {
     public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
     {

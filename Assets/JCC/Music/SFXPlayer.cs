@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Emc2.Scripts.Music
+namespace JCC.Music
 {
     [RequireComponent(typeof(AudioSource))]
     public class SFXPlayer : MonoBehaviour

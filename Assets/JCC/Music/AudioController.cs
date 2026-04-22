@@ -1,9 +1,9 @@
-using Emc2.Scripts.Singleton;
+using JCC.Utils.Singleton;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Emc2.Scripts.Music
+namespace JCC.Music
 {
     public class AudioController : SingletonMonoBehaviour<AudioController>
     {
