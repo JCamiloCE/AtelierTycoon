@@ -1,0 +1,24 @@
+{
+    "name": "Emc2.Scripts.Initialization",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5057ce3992ee6464891a923bc3d8a249",
+        "GUID:3d4b0bfeb6fdce246af40f72d7915dbb",
+        "GUID:6e959e1b4ffd0ef499d8db0dbbc79a1e",
+        "GUID:c0848a284a558ab4988ead58be854ba0",
+        "GUID:3e55e85d638e33d48965617386381709",
+        "GUID:9d75aa54e8571a04985d8aa93f4f0c7c",
+        "GUID:c669798f96b0ef54f9246a0aff29c13f",
+        "GUID:e1c678d83714ea14d93b97b4413fcda8",
+        "GUID:a8b33b67a04fdab47a5df48378eb6033"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

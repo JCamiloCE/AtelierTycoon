@@ -1,0 +1,20 @@
+{
+    "name": "Emc2.Scripts.Scenes",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5057ce3992ee6464891a923bc3d8a249",
+        "GUID:9f8c4fb5d8aaace48b51412f97b1b593",
+        "GUID:6e959e1b4ffd0ef499d8db0dbbc79a1e",
+        "GUID:eb018f2c84b007c429dca8f71ef44797",
+        "GUID:9a2e5444a1862994db0194e271539b83"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

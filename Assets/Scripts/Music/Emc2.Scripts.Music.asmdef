@@ -1,0 +1,18 @@
+{
+    "name": "Emc2.Scripts.Music",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5057ce3992ee6464891a923bc3d8a249",
+        "GUID:5334b4cb42914124490f638f8c335482",
+        "GUID:4a81140d601cf6f4fb9f486ccead3eba"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
