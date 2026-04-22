@@ -1,0 +1,17 @@
+{
+    "name": "JCC.Utils.Art",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4e4b9730e4362904c8607afa15af7f98",
+        "GUID:6e959e1b4ffd0ef499d8db0dbbc79a1e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

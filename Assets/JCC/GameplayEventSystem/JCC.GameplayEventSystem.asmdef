@@ -1,0 +1,16 @@
+{
+    "name": "JCC.GameplayEventSystem",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a8b33b67a04fdab47a5df48378eb6033"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,20 @@
+{
+    "name": "JCC.Localization",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6e959e1b4ffd0ef499d8db0dbbc79a1e",
+        "GUID:a8b33b67a04fdab47a5df48378eb6033",
+        "GUID:4a81140d601cf6f4fb9f486ccead3eba",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
