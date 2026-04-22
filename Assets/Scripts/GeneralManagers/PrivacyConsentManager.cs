@@ -1,5 +1,5 @@
 using Emc2.Scripts.Enums;
-using Emc2.Scripts.Scenes;
+using JCC.Scenes;
 using Unity.Services.Core;
 using Unity.Services.Core.Environments;
 using UnityEngine;
@@ -76,7 +76,7 @@ namespace Emc2.Scripts.GeneralManagers
             //AnalyticsManager analytics = new AnalyticsManager();
             //analytics.Initialization(consent);
 
-            SceneController.Instance.LoadScene(ESceneIds.MainMenu);
+            SceneController<ESceneIds>.Instance.LoadScene(ESceneIds.MainMenu);
         }
         #endregion private
     }

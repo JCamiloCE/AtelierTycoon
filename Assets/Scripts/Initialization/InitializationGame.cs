@@ -1,6 +1,6 @@
-using Emc2.Scripts.Scenes;
+using Emc2.Scripts.Enums;
 using JCC.Debug;
-using JCC.Localization;
+using JCC.Scenes;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +15,14 @@ namespace Emc2.Scripts.Initialization
 
             LoadController("pf_FadeCanvas");
             LoadController("pf_AudioController");
-            CreateNewMonobehaviourController<SceneController>("SceneController");
+            SceneController<ESceneIds> sceneController = CreateNewMonobehaviourController<SceneController<ESceneIds>>("SceneController");
+            Dictionary<ESceneIds, string> scenesNamesByIds = new Dictionary<ESceneIds, string>
+            {
+                { ESceneIds.MainMenu, "MainMenu" },
+                { ESceneIds.Gameplay, "Gameplay" },
+                { ESceneIds.Intermediate, "IntermediateInit" }
+            };
+            sceneController.SetScenes(scenesNamesByIds);
             InitializeLocalization();
             CreateLogicClasses();
         }

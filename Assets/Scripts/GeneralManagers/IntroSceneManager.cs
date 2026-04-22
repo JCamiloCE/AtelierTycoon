@@ -1,5 +1,5 @@
 using Emc2.Scripts.Enums;
-using Emc2.Scripts.Scenes;
+using JCC.Scenes;
 using UnityEngine;
 
 namespace Emc2.Scripts.GeneralManagers
@@ -13,7 +13,7 @@ namespace Emc2.Scripts.GeneralManagers
 
         private void WaitIntro() 
         {
-            SceneController.Instance.LoadScene(ESceneIds.Intermediate);
+            SceneController<ESceneIds>.Instance.LoadScene(ESceneIds.Intermediate);
         }
     }
 }

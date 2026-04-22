@@ -1,4 +1,3 @@
-using Emc2.Scripts.Enums;
 using JCC.Debug;
 using JCC.Fade;
 using JCC.Music;
@@ -7,26 +6,28 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-namespace Emc2.Scripts.Scenes
+namespace JCC.Scenes
 {
-    public class SceneController : SingletonMonoBehaviour<SceneController>
+    public class SceneController<TEnum> : SingletonMonoBehaviour<SceneController<TEnum>> where TEnum : Enum
     {
-        private Dictionary<ESceneIds, string> _scenesNamesByIds = null;
+        private Dictionary<TEnum, string> _scenesNamesByIds = null;
 
         #region Singleton
         protected override void AfterSingletonCreation()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             FadeController.Instance.ForceFadeIn();
-            _scenesNamesByIds = new Dictionary<ESceneIds, string>();
-            _scenesNamesByIds.Add(ESceneIds.MainMenu, "MainMenu");
-            _scenesNamesByIds.Add(ESceneIds.Gameplay, "Gameplay");
-            _scenesNamesByIds.Add(ESceneIds.Intermediate, "IntermediateInit");
         }
         #endregion Singleton
 
         #region public
-        public void LoadScene(ESceneIds sceneId) 
+        public void SetScenes(Dictionary<TEnum, string> scenes) 
+        {
+            _scenesNamesByIds = new Dictionary<TEnum, string>();
+            _scenesNamesByIds = scenes;
+        }
+
+        public void LoadScene(TEnum sceneId) 
         {
             string name = string.Empty;
             _scenesNamesByIds.TryGetValue(sceneId, out name);
