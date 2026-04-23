@@ -18,7 +18,6 @@ namespace Emc2.Scripts.Initialization
             SceneController<ESceneIds> sceneController = CreateNewMonobehaviourController<SceneController<ESceneIds>>("SceneController");
             Dictionary<ESceneIds, string> scenesNamesByIds = new Dictionary<ESceneIds, string>
             {
-                { ESceneIds.MainMenu, "MainMenu" },
                 { ESceneIds.Gameplay, "Gameplay" },
                 { ESceneIds.Intermediate, "IntermediateInit" }
             };
