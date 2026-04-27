@@ -2,8 +2,8 @@
     "name": "JCC.Music",
     "rootNamespace": "",
     "references": [
-        "GUID:5057ce3992ee6464891a923bc3d8a249",
-        "GUID:4a81140d601cf6f4fb9f486ccead3eba"
+        "GUID:4a81140d601cf6f4fb9f486ccead3eba",
+        "GUID:44c9a87c9991c3a4192710385564cb4b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

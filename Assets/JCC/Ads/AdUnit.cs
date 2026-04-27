@@ -1,3 +1,5 @@
+using JCC.Enums;
+
 namespace JCC.Ads
 {
     public class AdUnit
@@ -46,5 +48,6 @@ namespace JCC.Ads
         }
 
         public void SetState(EAdState newState) => _currentState = newState;
+        public EAdState GetAdState => _currentState;
     }
 }

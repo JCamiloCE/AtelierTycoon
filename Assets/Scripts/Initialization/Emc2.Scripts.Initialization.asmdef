@@ -2,11 +2,11 @@
     "name": "Emc2.Scripts.Initialization",
     "rootNamespace": "",
     "references": [
-        "GUID:5057ce3992ee6464891a923bc3d8a249",
-        "GUID:3d4b0bfeb6fdce246af40f72d7915dbb",
         "GUID:6e959e1b4ffd0ef499d8db0dbbc79a1e",
         "GUID:e1c678d83714ea14d93b97b4413fcda8",
         "GUID:a8b33b67a04fdab47a5df48378eb6033",
+        "GUID:44c9a87c9991c3a4192710385564cb4b",
+        "GUID:4d9e253fa3902e94db2ee53e0220770a",
         "GUID:9a2e5444a1862994db0194e271539b83",
         "GUID:c8435164c1217e24fb9259271e2773ca"
     ],

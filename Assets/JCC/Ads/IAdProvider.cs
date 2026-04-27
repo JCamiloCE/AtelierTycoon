@@ -1,3 +1,4 @@
+using JCC.Enums;
 using System;
 
 namespace JCC.Ads

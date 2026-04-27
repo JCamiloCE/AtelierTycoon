@@ -1,22 +1,29 @@
 using JCC.Debug;
+using JCC.Enums;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace JCC.Ads
 {
     public class AdManager : MonoBehaviour
     {
+        private const string SHOWED_VIDEO_KEY = "ShowedVideoPlayerPrefKey";
+
         public event Action<ETypeAd> OnAdShowStarted;
         public event Action<ETypeAd, bool> OnAdShowCompleted;
         public event Action<ETypeAd> OnAdShowFailed;
+        public event Action OnAdLoaded;
 
         private Action<bool> _onInitialized = null;
         private IAdProvider _adProvider = null;
         private AdUnit _interstitialAd = null;
         private AdUnit _rewardedAd = null;
+        private int _maxCounterToInterstitial = 0;
+        private int _currentToInterstitial = 0;
 
         #region public
-        public void InitializeAds(IAdProvider adProvider, Action<bool> onInitialized, bool consent, bool isDebugBuild)
+        public void InitializeAds(IAdProvider adProvider, Action<bool> onInitialized, int counterToInterstitial, bool consent, bool isDebugBuild)
         {
             _onInitialized = onInitialized;
             _adProvider = adProvider;
@@ -24,18 +31,31 @@ namespace JCC.Ads
             _rewardedAd = new AdUnit(ETypeAd.Reward, _adProvider);
             _adProvider.ConfigureGDPR(consent);
             _adProvider.Initialize(isDebugBuild, OnInitialized);
+            _maxCounterToInterstitial = counterToInterstitial;
+            _currentToInterstitial = 0;
+            if (PlayerPrefs.HasKey(SHOWED_VIDEO_KEY))
+            {
+                _currentToInterstitial = PlayerPrefs.GetInt(SHOWED_VIDEO_KEY);
+            }
         }
 
         public bool TryShowInterstitial()
         {
-            if (!_interstitialAd.TryShow())
+            SetCoutnerInterstitialMax(_currentToInterstitial - 1);
+            if (_currentToInterstitial <= 0)
             {
-                DebugManager.LogWarning($"[AdManager] ShowInterstitialAdEvent: Interstitial not ready.");
+                if (!_interstitialAd.TryShow())
+                {
+                    DebugManager.LogWarning($"[AdManager] ShowInterstitialAdEvent: Interstitial not ready.");
+                    LoadInterstitialInternal();
+                    SetCoutnerInterstitialMax(_currentToInterstitial + 1);
+                    return false;
+                }
                 LoadInterstitialInternal();
-                return false;
+                SetCoutnerInterstitialMax(_maxCounterToInterstitial);
+                return true;
             }
-            LoadInterstitialInternal();
-            return true;
+            return false;
         }
 
         public bool TryShowRewarded()
@@ -46,8 +66,17 @@ namespace JCC.Ads
                 LoadRewardedInternal();
                 return false;
             }
+            SetCoutnerInterstitialMax(_maxCounterToInterstitial);
             LoadRewardedInternal();
             return true;
+        }
+
+        public Dictionary<ETypeAd, bool> GetAdsStatus() 
+        {
+            Dictionary<ETypeAd, bool> adsStatus = new Dictionary<ETypeAd, bool>();
+            adsStatus.Add(ETypeAd.Reward, _rewardedAd.GetAdState == EAdState.Loaded);
+            adsStatus.Add(ETypeAd.Interstitial, _interstitialAd.GetAdState == EAdState.Loaded);
+            return adsStatus;
         }
         #endregion public
 
@@ -103,6 +132,7 @@ namespace JCC.Ads
                     _rewardedAd.SetState(EAdState.Loaded);
                     break;
             }
+            OnAdLoaded?.Invoke();
         }
 
         private void AdLoadFailed(ETypeAd typeAd, string message) 
@@ -163,6 +193,13 @@ namespace JCC.Ads
                     break;
             }
             OnAdShowFailed?.Invoke(typeAd);
+        }
+
+        private void SetCoutnerInterstitialMax(int newValue) 
+        {
+            _currentToInterstitial = newValue;
+            PlayerPrefs.SetInt(SHOWED_VIDEO_KEY, _currentToInterstitial);
+            PlayerPrefs.Save();
         }
     }
 }

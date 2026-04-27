@@ -2,10 +2,10 @@
     "name": "JCC.Scenes",
     "rootNamespace": "",
     "references": [
-        "GUID:5057ce3992ee6464891a923bc3d8a249",
-        "GUID:9f8c4fb5d8aaace48b51412f97b1b593",
         "GUID:6e959e1b4ffd0ef499d8db0dbbc79a1e",
-        "GUID:eb018f2c84b007c429dca8f71ef44797"
+        "GUID:b5de869163c9e5641b03a8ffd381ec7f",
+        "GUID:009a501eeb631fa499bafb1e94db469c",
+        "GUID:44c9a87c9991c3a4192710385564cb4b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
