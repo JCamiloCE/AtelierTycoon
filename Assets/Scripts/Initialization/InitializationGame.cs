@@ -1,6 +1,6 @@
 using Emc2.Scripts.Enums;
+using Emc2.Scripts.GeneralManagers;
 using JCC.Debug;
-using JCC.Scenes;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,13 +15,7 @@ namespace Emc2.Scripts.Initialization
 
             LoadController("pf_FadeCanvas");
             LoadController("pf_AudioController");
-            SceneController<ESceneIds> sceneController = CreateNewMonobehaviourController<SceneController<ESceneIds>>("SceneController");
-            Dictionary<ESceneIds, string> scenesNamesByIds = new Dictionary<ESceneIds, string>
-            {
-                { ESceneIds.Gameplay, "Gameplay" },
-                { ESceneIds.Intermediate, "IntermediateInit" }
-            };
-            sceneController.SetScenes(scenesNamesByIds);
+            CreateSceneController();
             InitializeLocalization();
             CreateLogicClasses();
         }
@@ -41,6 +35,18 @@ namespace Emc2.Scripts.Initialization
             GameObject newGoController = new GameObject(nameGo);
             T newClass = newGoController.AddComponent<T>();
             return newClass;
+        }
+
+        private static void CreateSceneController() 
+        {
+            GameObject newGoController = new GameObject("SceneController");
+            ImplSceneManager sceneController = newGoController.AddComponent<ImplSceneManager>();
+            Dictionary<ESceneIds, string> scenesNamesByIds = new Dictionary<ESceneIds, string>
+            {
+                { ESceneIds.Gameplay, "Gameplay" },
+                { ESceneIds.Intermediate, "IntermediateInit" }
+            };
+            sceneController.SetScenes(scenesNamesByIds);
         }
 
         private static void CreateLogicClasses() 

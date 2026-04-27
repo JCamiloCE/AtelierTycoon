@@ -13,7 +13,7 @@ namespace Emc2.Scripts.GeneralManagers
 
         private void WaitIntro() 
         {
-            SceneController<ESceneIds>.Instance.LoadScene(ESceneIds.Intermediate);
+            ImplSceneManager.Instance.LoadScene(ESceneIds.Intermediate);
         }
     }
 }

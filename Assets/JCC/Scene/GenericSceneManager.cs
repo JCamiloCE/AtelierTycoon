@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 namespace JCC.Scenes
 {
-    public class SceneController<TEnum> : SingletonMonoBehaviour<SceneController<TEnum>> where TEnum : Enum
+    public abstract class GenericSceneManager<TEnum> : SingletonMonoBehaviour<GenericSceneManager<TEnum>> where TEnum : Enum
     {
         private Dictionary<TEnum, string> _scenesNamesByIds = null;
 

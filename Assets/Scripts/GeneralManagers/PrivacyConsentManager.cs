@@ -76,7 +76,7 @@ namespace Emc2.Scripts.GeneralManagers
             //AnalyticsManager analytics = new AnalyticsManager();
             //analytics.Initialization(consent);
 
-            SceneController<ESceneIds>.Instance.LoadScene(ESceneIds.MainMenu);
+            ImplSceneManager.Instance.LoadScene(ESceneIds.Gameplay);
         }
         #endregion private
     }
