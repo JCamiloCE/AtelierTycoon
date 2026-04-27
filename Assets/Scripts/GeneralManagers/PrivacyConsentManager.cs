@@ -1,3 +1,4 @@
+using Emc2.Scripts.Analytics;
 using Emc2.Scripts.Enums;
 using JCC.Scenes;
 using Unity.Services.Core;
@@ -73,8 +74,8 @@ namespace Emc2.Scripts.GeneralManagers
 
             //AdController adController = new AdController();
             //adController.InitAds(consent, _isDebugBuild);
-            //AnalyticsManager analytics = new AnalyticsManager();
-            //analytics.Initialization(consent);
+            AnalyticsManager analytics = new AnalyticsManager();
+            analytics.Initialization(consent);
 
             ImplSceneManager.Instance.LoadScene(ESceneIds.Gameplay);
         }
