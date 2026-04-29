@@ -1,5 +1,6 @@
+using Emc2.Scripts.AdsImplementation;
+using Emc2.Scripts.Analytics;
 using Emc2.Scripts.Enums;
-using JCC.Scenes;
 using Unity.Services.Core;
 using Unity.Services.Core.Environments;
 using UnityEngine;
@@ -71,8 +72,8 @@ namespace Emc2.Scripts.GeneralManagers
             state.AdsIntent = consent ? ConsentStatus.Granted : ConsentStatus.Denied;
             EndUserConsent.SetConsentState(state);
 
-            //AdController adController = new AdController();
-            //adController.InitAds(consent, _isDebugBuild);
+            AdController adController = new AdController();
+            adController.InitAds(consent, _isDebugBuild);
             //AnalyticsManager analytics = new AnalyticsManager();
             //analytics.Initialization(consent);
 

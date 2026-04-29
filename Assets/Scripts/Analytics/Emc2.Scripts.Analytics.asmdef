@@ -1,15 +1,12 @@
 {
-    "name": "Emc2.Scripts.GeneralManagers",
+    "name": "Emc2.Scripts.Analytics",
     "rootNamespace": "",
     "references": [
+        "GUID:6e959e1b4ffd0ef499d8db0dbbc79a1e",
         "GUID:4a81140d601cf6f4fb9f486ccead3eba",
-        "GUID:4d9e253fa3902e94db2ee53e0220770a",
-        "GUID:44c9a87c9991c3a4192710385564cb4b",
+        "GUID:5e0b455853cd340e0813387221dfd501",
         "GUID:9a2e5444a1862994db0194e271539b83",
-        "GUID:300537082793a5d49b53c337c73cf3b7",
-        "GUID:93b29ce4f4e15614e8b5f618f434c347",
-        "GUID:fe25561d224ed4743af4c60938a59d0b",
-        "GUID:70ea675efa2644cef98c7ece24158333"
+        "GUID:cf0328deae45e6c4fb6302fa2bf6f471"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
