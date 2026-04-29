@@ -90,12 +90,13 @@ namespace JCC.Ads
         {
             if (wasInitialized)
             {
+                DebugManager.LogVerbose("[AdManager] Provider was initialized properly");
                 SuscribeToProvider();
                 LoadAllAds();
             }
             else 
             {
-                DebugManager.LogWarning($"OnInitializationFailed: {error.ToString()}");
+                DebugManager.LogWarning($"[AdManager] OnInitializationFailed: {error.ToString()}");
                 DebugManager.LogWarning($"[AdManager] OnInitialized typeAd: {error.ToString()}");
             }
             _onInitialized?.Invoke(wasInitialized);

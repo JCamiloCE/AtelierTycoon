@@ -62,7 +62,7 @@ namespace Emc2.Scripts.AdsImplementation
             EventManager.AddListener<ShowRewardedAdEvent>(this);
             EventManager.AddListener<RequestAdsStatusEvent>(this);
 
-            IAdProvider adProvider = new UnityAdsProvider();
+            IAdProvider adProvider = new LevelPlayAdsProvider();
             GameObject newGoAdManager = new GameObject("AdManager");
             _adManager = newGoAdManager.AddComponent<AdManager>();
             _adManager.InitializeAds(adProvider, OnInitialized, MAX_COUNTER_TO_INTERSTITIAL, consent, isDebugBuild);
