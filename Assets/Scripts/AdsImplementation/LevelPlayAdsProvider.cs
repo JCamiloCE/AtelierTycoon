@@ -72,7 +72,7 @@ namespace Emc2.Scripts.AdsImplementation
             _isInitialized = true;
             if (_isTestMode)
             {
-                LevelPlay.LaunchTestSuite();
+                //LevelPlay.LaunchTestSuite();
             }
         }
 
@@ -91,21 +91,14 @@ namespace Emc2.Scripts.AdsImplementation
             _rewardedAd.OnAdDisplayed += RewardedOnAdDisplayedEvent;
             _rewardedAd.OnAdDisplayFailed += RewardedOnAdDisplayFailedEvent;
             _rewardedAd.OnAdRewarded += RewardedOnAdRewardedEvent;
-            //_rewardedAd.OnAdClosed += RewardedOnAdClosedEvent;
         }
 
-        //public event Action<ETypeAd> OnAdLoaded;
-        //public event Action<ETypeAd, string> OnAdLoadFailed;
-        //public event Action<ETypeAd> OnAdShowStarted;
-        //public event Action<ETypeAd, bool> OnAdShowCompleted;
-        //public event Action<ETypeAd, string> OnAdShowFailed;
 
         private void RewardedOnAdLoadedEvent(LevelPlayAdInfo adInfo) => OnAdLoaded?.Invoke(ETypeAd.Reward);
         private void RewardedOnAdLoadFailedEvent(LevelPlayAdError adError) => OnAdLoadFailed?.Invoke(ETypeAd.Reward, adError.ErrorMessage);
         private void RewardedOnAdDisplayedEvent(LevelPlayAdInfo adInfo) => OnAdShowStarted?.Invoke(ETypeAd.Reward);
         private void RewardedOnAdDisplayFailedEvent(LevelPlayAdInfo adInfo, LevelPlayAdError adError) => OnAdShowFailed?.Invoke(ETypeAd.Reward, adError.ErrorMessage);
         private void RewardedOnAdRewardedEvent(LevelPlayAdInfo adInfo, LevelPlayReward rewarded) => OnAdShowCompleted?.Invoke(ETypeAd.Reward, true);
-        //private void RewardedOnAdClosedEvent(LevelPlayAdInfo adInfo) => OnAdShowCompleted?.Invoke(ETypeAd.Reward, adInfo.);
         #endregion Private
     }
 }
