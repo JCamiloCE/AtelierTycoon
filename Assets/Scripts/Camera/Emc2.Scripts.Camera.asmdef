@@ -1,12 +1,13 @@
 {
-    "name": "Emc2.Scripts.Input",
+    "name": "Emc2.Scripts.Camera",
     "rootNamespace": "",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c",
         "GUID:6e959e1b4ffd0ef499d8db0dbbc79a1e",
         "GUID:4a81140d601cf6f4fb9f486ccead3eba",
         "GUID:cf0328deae45e6c4fb6302fa2bf6f471",
-        "GUID:9a2e5444a1862994db0194e271539b83"
+        "GUID:9a2e5444a1862994db0194e271539b83",
+        "GUID:b5de869163c9e5641b03a8ffd381ec7f",
+        "GUID:44c9a87c9991c3a4192710385564cb4b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

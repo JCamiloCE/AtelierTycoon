@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664430a4d98f16b4d83ae63f99ec59e5, type: 3}
+  m_Name: CameraDatabase
+  m_EditorClassIdentifier: Emc2.Scripts.Camera::Emc2.Scripts.Camera.CameraViewDataScriptable
+  _entries:
+  - view: 50002
+    defaultPosition: {x: 0, y: 0}
+    defaultZoom: 5
+    minOrthographicSize: 3
+    maxOrthographicSize: 10
+    minBounds: {x: -5, y: -5}
+    maxBounds: {x: 5, y: 5}
+  - view: 151714
+    defaultPosition: {x: 0, y: 0}
+    defaultZoom: 2
+    minOrthographicSize: 3
+    maxOrthographicSize: 5
+    minBounds: {x: -2, y: -2}
+    maxBounds: {x: 2, y: 2}
