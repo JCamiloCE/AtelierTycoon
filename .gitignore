@@ -20,6 +20,7 @@ ExportedObj/
 *.csproj
 *.unityproj
 *.sln
+*.slnx
 *.suo
 *.tmp
 *.user
@@ -34,6 +35,7 @@ ExportedObj/
 *.vs
 *.vsconfig
 .vs/
+.vscode
 
 # Crash
 sysinfo.txt
